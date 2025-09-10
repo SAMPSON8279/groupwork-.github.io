@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ingredients CRUD App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Ingredients Manager</h1>
+
+  <form id="ingredientForm">
+    <input type="text" id="ingredientName" placeholder="Enter ingredient" required />
+    <input type="text" id="ingredientType" placeholder="Enter Ingredient Type" required />
+    <input type="text" id="quantity" placeholder="Enter Quantity" required />
+    <button type="submit">Add</button>
+  </form>
+
+  <h2>Current Ingredients</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Ingredient Type</th>
+        <th>Quantity</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="ingredientTableBody"></tbody>
+  </table>
+
+  <script src="index.js"></script>
+</body>
+</html>
