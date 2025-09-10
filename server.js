@@ -1,11 +1,20 @@
-const express = require("express");
-const sqlite3 = require("sqlite3").verbose();
-const path = require("path");
-const bodyParser = require("body-parser");
-const cors = require("cors");
+// const express = require("express");
+import express from "express";
+// const sqlite3 = require("sqlite3").verbose();
+import sqlite3 from "sqlite3";
+// const path = require("path");
+import path from "path";
+// const bodyParser = require("body-parser");
+import bodyParser from "body-parser";
+// const cors = require("cors");
+import cors from "cors";
+import { fileURLToPath } from "url";
 
 const app = express();
 const PORT = process.env.PORT || 3000; 
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 
 app.use(cors());
@@ -64,3 +73,5 @@ app.delete("/ingredients/:id", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
+
+export default app;
